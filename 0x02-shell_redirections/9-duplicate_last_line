@@ -1,2 +1,1 @@
-#!/bin/bash
-last_line=(tail -n 1 iacta)
+indicate that events have passed a point of no return.
