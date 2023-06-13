@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -oE '^[^:]+:[^:]+:' /etc/passwd | sed 's/:/ /' | sort
+while IFS=: read -r user _ _ _ _ home _; do echo "$user $home"; done < /etc/passwd | sort
