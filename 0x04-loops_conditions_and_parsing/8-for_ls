@@ -1,3 +1,17 @@
 #!/usr/bin/env bash
 # This script is displaying the content of the current directory in a list format.
-
+# Loop through files in the current directory
+for file in *; do
+    # Check if the file is not hidden and contains a dash
+    if [[ ! "$file" == .* && "$file" == *-* ]]; then
+        # Extract the part of the name after the first dash
+        name="${file#*-}"
+	# check if it's the first filename
+	if $first_file; then
+		echo -n "$name"
+		first_file=false
+	else
+        echo  "$name"
+	fi
+    fi
+done
