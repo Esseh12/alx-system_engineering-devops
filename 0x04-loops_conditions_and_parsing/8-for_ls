@@ -1,27 +1,3 @@
-#!/bin/bash
-
-# Initialize a counter variable
-counter=1
-
-# List files in the current directory and filter out hidden files
-files=$(ls -1 | grep -v '^\.')
-
-# Calculate the total number of files
-total_files=$(echo "$files" | wc -l)
-
-# Start the while loop
-while [ $counter -le $total_files ]; do
-    # Get the file name at the current position
-    file=$(echo "$files" | sed -n "${counter}p")
-    
-    # Check if the file contains a dash
-    if [[ $file == *-* ]]; then
-        # Extract the part of the name after the first dash
-        name="${file#*-}"
-        echo "$name"
-    fi
-    
-    # Increment the counter
-    ((counter++))
-done
+#!/usr/bin/env bash
+# This script is displaying the content of the current directory in a list format.
 
