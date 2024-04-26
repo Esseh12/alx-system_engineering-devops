@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# installing nginx on 18.234.106.65
+
+sudo apt -y update
+sudo apt-get -y install nginx
+sudo ufw allow "Nginx HTTP"
+echo 'Hello World!' > /var/www/html
+sudo service nginx start
