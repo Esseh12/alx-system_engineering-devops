@@ -1,4 +1,4 @@
-# Copyright (c) 2016, 2023, Oracle and/or its affiliates.
+# Copyright (c) 2014, 2023, Oracle and/or its affiliates.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License, version 2.0,
@@ -20,7 +20,6 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
-
 #
 # The MySQL  Server configuration file.
 #
@@ -34,14 +33,11 @@ datadir         = /var/lib/mysql
 log-error       = /var/log/mysql/error.log
 # By default we only accept connections from localhost
 # bind-address  = 127.0.0.1
-server-id       = 1
-log_bin         = /var/log/mysql/mysql-bin.log
+server-id = 1
+log_bin = /var/log/mysql/mysql-bin.log
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
 
+
 # Setting up Replication for a database
 binlog_do_db    = tyrell_corp
-
-
-!includedir /etc/mysql/conf.d/
-!includedir /etc/mysql/mysql.conf.d/
